@@ -1,0 +1,23 @@
+# Dépendances (se réinstallent avec `npm install`)
+node_modules/
+
+# Secrets : ne JAMAIS pousser les mots de passe de la base de données
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+*.log
+
+# Fichiers générés par les exercices
+**/data/journal.txt
+**/data/*-majuscules.txt
+
+# Système / éditeur
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+**/data/message-copie.txt
+**/data/produits-db.json

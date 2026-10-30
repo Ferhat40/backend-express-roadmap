@@ -1,0 +1,14 @@
+{
+  "name": "chap02-js-async",
+  "version": "1.0.0",
+  "description": "Chapitre 2 - JavaScript moderne et programmation asynchrone",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["node", "javascript", "async"],
+  "author": "Mohamed Yassine Ferhat",
+  "license": "ISC"
+}

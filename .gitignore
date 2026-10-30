@@ -13,6 +13,7 @@ npm-debug.log*
 # Fichiers générés par les exercices
 **/data/journal.txt
 **/data/*-majuscules.txt
+**/data/tableau.txt
 
 # Système / éditeur
 .DS_Store

@@ -11,7 +11,14 @@ import {
   rechercherCategorie,
 } from "../chap02-js-async/modules/fonctions.js";
 import { professeurs } from "../chap02-js-async/data/professeurs.js";
-import { getDernierProf, getProfParCours } from "../chap02-js-async/modules/professeurs.js";
+import {
+  getProfsRangImpair,
+  getDernierProf,
+  getProfParCours,
+  ajouterProfil,
+  getClefParValeur,
+  supprimerAttribut,
+} from "../chap02-js-async/modules/professeurs.js";
 
 console.log("Q1:", getNomsCategories(categories));
 
@@ -68,3 +75,16 @@ console.log(
   "Q10 : ",
   getProfParCours(professeurs, "Anglais").map((prof) => prof.nom),
 );
+
+// ----- Exercices professeurs a, d, e, g -----
+console.log(
+  "Prof a (rang impair) : ",
+  getProfsRangImpair(professeurs).map((prof) => prof.nom),
+);
+console.log(
+  "Prof d (profil) : ",
+  ajouterProfil(professeurs).map((prof) => `${prof.nom} : ${prof.profil}`),
+);
+console.log("Prof e (clé de 187) : ", getClefParValeur(professeurs[0], 187));
+console.log("Prof g : ", supprimerAttribut(professeurs[0], "code-employe"));
+console.log("Prof g, original intact : ", professeurs[0]["code-employe"]);

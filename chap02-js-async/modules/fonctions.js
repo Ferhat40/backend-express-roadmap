@@ -21,5 +21,5 @@ export const calculerPrix = (categorie) => {
     (boule, produit) => boule + produit.prix,
     0,
   );
-  return total;
+  return `$${total}`;
 };

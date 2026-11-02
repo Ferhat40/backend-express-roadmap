@@ -4,6 +4,7 @@ import {
   getProduits,
   getCategoriesParProduit,
   getCategorie,
+  calculerPrix,
 } from "../chap02-js-async/modules/fonctions.js";
 
 console.log("Q1:", getNomsCategories(categories));
@@ -26,3 +27,6 @@ console.log("Q3: pizza", getCategoriesParProduit(categories, "pizza"));
 
 console.log("Q4: 3", getCategorie(categories, 3));
 console.log("Q4: 99", getCategorie(categories, 99));
+
+console.log("Q5 :", calculerPrix(categories[2]));
+console.log("Q5 habits :", calculerPrix(categories[0]));

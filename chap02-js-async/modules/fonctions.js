@@ -15,3 +15,11 @@ export const getCategoriesParProduit = (liste, nomProduit) =>
 // question 4 - find()
 export const getCategorie = (liste, idCategorie) =>
   liste.find((categorie) => categorie.id === idCategorie);
+// question 5 - reduce()
+export const calculerPrix = (categorie) => {
+  const total = categorie.produits.reduce(
+    (boule, produit) => boule + produit.prix,
+    0,
+  );
+  return total;
+};

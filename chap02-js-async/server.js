@@ -7,6 +7,8 @@ import {
   calculerPrix,
   ajouterProduit,
   creerCategorie,
+  getCategoriesServeur,
+  rechercherCategorie,
 } from "../chap02-js-async/modules/fonctions.js";
 
 console.log("Q1:", getNomsCategories(categories));
@@ -54,3 +56,6 @@ const boissons = creerCategorie(
 );
 
 console.log("Q7 : ", boissons);
+
+console.log("Q8 id 2 : ", await rechercherCategorie(2));
+console.log("Q8 id 99 : ", await rechercherCategorie(99));

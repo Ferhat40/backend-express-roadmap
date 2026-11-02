@@ -1,3 +1,5 @@
+import { categories } from "../data/categories.js";
+
 /*question 1 - map()*/
 export const getNomsCategories = (liste) =>
   liste.map((categorie) => `${categorie.nom} ${categorie.id}`);
@@ -45,4 +47,21 @@ export const creerCategorie = (id, nom, commentaireClient, ...produits) => {
     "commentaire-client": commentaireClient,
     produits: produits,
   };
+};
+// question 8 - promise et async/await
+export const getCategoriesServeur = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(categories);
+    }, 1000);
+  });
+};
+
+export const rechercherCategorie = async (id) => {
+  const donnees = await getCategoriesServeur();
+  const categorie = donnees.find((categorie) => categorie.id === id);
+  if (!categorie) {
+    return `Aucune categorie avec l'id ${id}`;
+  }
+  return categorie;
 };

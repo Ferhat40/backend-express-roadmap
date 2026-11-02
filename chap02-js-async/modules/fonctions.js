@@ -30,3 +30,10 @@ export const calculerPrix = (categorie) => {
   );
   return `$${total}`;
 };
+// question 6 : spread
+export const ajouterProduit = (categorie, nouveauProduit) => {
+  return {
+    ...categorie,
+    produits: [...categorie.produits, nouveauProduit],
+  };
+};

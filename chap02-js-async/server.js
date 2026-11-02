@@ -3,6 +3,7 @@ import {
   getNomsCategories,
   getProduits,
   getCategoriesParProduit,
+  getCategorie,
 } from "../chap02-js-async/modules/fonctions.js";
 
 console.log("Q1:", getNomsCategories(categories));
@@ -22,3 +23,6 @@ console.log(
   ),
 );
 console.log("Q3: pizza", getCategoriesParProduit(categories, "pizza"));
+
+console.log("Q4: 3", getCategorie(categories, 3));
+console.log("Q4: 99", getCategorie(categories, 99));

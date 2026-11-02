@@ -11,3 +11,7 @@ export const getCategoriesParProduit = (liste, nomProduit) =>
   liste.filter((categorie) =>
     categorie.produits.some((produit) => produit.nom === nomProduit),
   );
+
+// question 4 - find()
+export const getCategorie = (liste, idCategorie) =>
+  liste.find((categorie) => categorie.id === idCategorie);

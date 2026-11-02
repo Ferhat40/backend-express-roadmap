@@ -13,8 +13,15 @@ export const getCategoriesParProduit = (liste, nomProduit) =>
   );
 
 // question 4 - find()
-export const getCategorie = (liste, idCategorie) =>
-  liste.find((categorie) => categorie.id === idCategorie);
+export const getCategorie = (liste, idCategorie) => {
+  const categorie = liste.find((categorie) => categorie.id === idCategorie);
+  if (!categorie) {
+    return undefined;
+  }
+  const { produits, ...sansProduits } = categorie;
+  return sansProduits;
+};
+
 // question 5 - reduce()
 export const calculerPrix = (categorie) => {
   const total = categorie.produits.reduce(

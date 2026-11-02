@@ -10,6 +10,8 @@ import {
   getCategoriesServeur,
   rechercherCategorie,
 } from "../chap02-js-async/modules/fonctions.js";
+import { professeurs } from "../chap02-js-async/data/professeurs.js";
+import { getDernierProf, getProfParCours } from "../chap02-js-async/modules/professeurs.js";
 
 console.log("Q1:", getNomsCategories(categories));
 
@@ -59,3 +61,10 @@ console.log("Q7 : ", boissons);
 
 console.log("Q8 id 2 : ", await rechercherCategorie(2));
 console.log("Q8 id 99 : ", await rechercherCategorie(99));
+
+console.log("Q9 : ", getDernierProf(professeurs).nom);
+
+console.log(
+  "Q10 : ",
+  getProfParCours(professeurs, "Anglais").map((prof) => prof.nom),
+);

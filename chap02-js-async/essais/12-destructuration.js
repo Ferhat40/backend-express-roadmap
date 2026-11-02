@@ -32,3 +32,13 @@ console.log("Partie E: ", tete, autres);
 
 const { produits, ...sansProduits } = categories[3];
 console.log("Partie E:", sansProduits);
+
+
+/* resume de destructuration
+const { nom, id } = objet                 // objet : par NOM
+const { nom: nomCategorie } = objet       // renommer
+liste.map(({ nom, id }) => ...)           // directement dans les paramètres
+const [premier, deuxieme] = tableau       // tableau : par POSITION
+const [tete, ...autres] = tableau         // rest : le reste dans un tableau
+const { produits, ...reste } = objet      // rest : tout sauf produits
+*/

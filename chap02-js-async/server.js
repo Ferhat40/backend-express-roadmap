@@ -6,6 +6,7 @@ import {
   getCategorie,
   calculerPrix,
   ajouterProduit,
+  creerCategorie,
 } from "../chap02-js-async/modules/fonctions.js";
 
 console.log("Q1:", getNomsCategories(categories));
@@ -42,3 +43,14 @@ console.log(
   "Q6 originale : ",
   categories[2].produits.map((produit) => produit.nom),
 );
+
+const boissons = creerCategorie(
+  50,
+  "boissons",
+  5,
+  { id: 111, nom: "Fanta", prix: 45 },
+  { id: 112, nom: "Sprite", prix: 40 },
+  { id: 113, nom: "The", prix: 10 },
+);
+
+console.log("Q7 : ", boissons);

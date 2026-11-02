@@ -37,3 +37,12 @@ export const ajouterProduit = (categorie, nouveauProduit) => {
     produits: [...categorie.produits, nouveauProduit],
   };
 };
+// question 7 rest
+export const creerCategorie = (id, nom, commentaireClient, ...produits) => {
+  return {
+    id: id,
+    nom: nom,
+    "commentaire-client": commentaireClient,
+    produits: produits,
+  };
+};
